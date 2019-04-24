@@ -120,11 +120,11 @@ public class MainForm extends javax.swing.JFrame {
 
     private void jButton_exportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_exportActionPerformed
         // TODO add your handling code here:
-        ExportForm ef= new ExportForm();
+   //     ExportForm ef= new ExportForm();
         MainForm mf= new MainForm();
-        ef.setVisible(true);
+       // ef.setVisible(true);
         mf.setVisible(false);
-        ef.setLocationRelativeTo(null);
+      //  ef.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_jButton_exportActionPerformed
 

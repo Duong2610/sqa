@@ -21,36 +21,11 @@ public class UserDAO {
     private ArrayList <User> users = new ArrayList();
     Connection con;
 
-    public UserDAO() {
-    }
+    
 
-    public UserDAO(Connection con) {
-        this.con = con;
+    public UserDAO() {
+        this.con = MyConnection.getConnection();
     }
     
-    public ArrayList<User> getAllUser(String thoiGian){
-        Connection con = MyConnection.getConnection();
-        PreparedStatement ps;
-        try{
-            ps=con.prepareStatement("SELECT full_name, cmnd, age, idbhxh,city, "
-                    + "type, thunhapCB, tienBH, s.ngay FROM user AS u LEFT JOIN "
-                    + "assurannce AS a ON u.id=a.id_user AND s.thang='"+thoiGian+ "'");
-            ResultSet rs = ps.executeQuery();
-            while(rs.next()){
-                users.add(new User(rs.getString("full_name"),
-                                    rs.getString("cmnd"),
-                                    rs.getString("idbhxh"),
-                                    rs.getString("city"),
-                                    rs.getInt("age"),
-                                    rs.getInt("type"),
-                                   new Assurance(rs.getString("thang"),
-                                   rs.getTimestamp("ngay"),
-                                   rs.getFloat("luongCB"),
-                                   rs.getFloat("tienBH"))));
-            }
-        }catch(SQLException ex){
-            
-        }
-        return null;
-    }
+    
 }

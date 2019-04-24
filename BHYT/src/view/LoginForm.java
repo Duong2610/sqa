@@ -175,7 +175,7 @@ public class LoginForm extends javax.swing.JFrame {
         else{
             Connection con = MyConnection.getConnection();
             PreparedStatement ps;
-            
+            System.out.println(jPasswordField1.getPassword());
             try {
                 ps = con.prepareStatement("SELECT * FROM account WHERE username = ? AND password=?");
                 ps.setString(1, jTextField_Username.getText());

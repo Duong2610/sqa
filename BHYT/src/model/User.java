@@ -16,19 +16,10 @@ public class User {
     private String city;
     private int age;
     private int type;
-    private Assurance assurance;
+    private float tongtien;
 
     public User() {
-    }
-
-    public User(String full_name, String cmnd, String aCode, String city, int age, int type, Assurance assurance) {
-        this.full_name = full_name;
-        this.cmnd = cmnd;
-        this.aCode = aCode;
-        this.city = city;
-        this.age = age;
-        this.type = type;
-        this.assurance = assurance;
+        tongtien =0;
     }
 
     public String getFull_name() {
@@ -79,13 +70,29 @@ public class User {
         this.type = type;
     }
 
-    public Assurance getAssurance() {
-        return assurance;
+    public double getTongtien() {
+        return tongtien;
     }
 
-    public void setAssurance(Assurance assurance) {
-        this.assurance = assurance;
+    public void setTongtien(float tongtien) {
+        this.tongtien = tongtien;
     }
+
+    public User(String full_name, String cmnd, String aCode, String city, int age, int type, float tongtien) {
+        this.full_name = full_name;
+        this.cmnd = cmnd;
+        this.aCode = aCode;
+        this.city = city;
+        this.age = age;
+        this.type = type;
+        this.tongtien = tongtien;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" + "full_name=" + full_name + ", cmnd=" + cmnd + ", aCode=" + aCode + ", city=" + city + ", age=" + age + ", type=" + type + ", tongtien=" + tongtien + '}';
+    }
+
     
     
     

@@ -5,6 +5,7 @@
  */
 package model;
 
+import java.sql.Timestamp;
 import java.util.Date;
 
 /**
@@ -27,6 +28,15 @@ public class Assurance {
         this.tienBH = tienBH;
         this.thunhapCB = thunhapCB;
     }
+
+   
+    public Assurance( float tienBH, Date ngay) {
+        this.tienBH= tienBH;
+        this.ngay = ngay;
+  
+       
+    }
+
 
     public String getThang() {
         return thang;
